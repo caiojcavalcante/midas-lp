@@ -7,11 +7,18 @@ const Testimonials = () => {
       <div className="wrapper">
         <Image src="/duckbill.png" height={100} width={100} alt="duckbill" />
         <div className="textWrapper">
+          <Image
+            className="quote"
+            src="/quotes.png"
+            width={50}
+            height={50}
+            alt="quotes"
+          />
           <p>
-            "A equipe da Midas foi essencial para a expansão do meu negócio.
+            A equipe da Midas foi essencial para a expansão do meu negócio.
             Eles são altamente profissionais, competentes e estão sempre em
             busca das melhores estratégias para atingir os objetivos da minha
-            empresa. Além disso, o atendimento é excepcional, personalizado e atencioso."
+            empresa. Além disso, o atendimento é excepcional, personalizado e atencioso.
           </p>
           <div className="author">
             <Image src="/polly.jpg" height={50} width={50} alt="polly" />
@@ -33,6 +40,9 @@ const Section = styled.section`
   justify-content: center;
   background-color: #faf7f6;
   padding: 2rem 0;
+  .quote {
+    transform: rotate(180deg);
+  }
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -47,6 +57,7 @@ const Section = styled.section`
       h2 {
         font-size: 0.8rem;
         font-weight: 500;
+        margin: 10px 0;
       }
       p {
         font-size: calc(1rem + 1vw);
