@@ -76,11 +76,12 @@ const ListWrapper = styled.div`
 `;
 
 const Wrapper = styled.div`
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 `;
 
 const Section = styled.section`
+  color: #faf6f7;
   width: 100%;
   padding: 40px;
   @media (max-width: 900px) {

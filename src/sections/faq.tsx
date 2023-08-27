@@ -27,10 +27,10 @@ const questions = [
     content:
       "Você pode ficar surpreso com isso, mas somos uma agência de uma pessoa só. Isso significa que você trabalhará direto comigo, o fundador.",
   },
-//   {
-//     title: "",
-//     content: "",
-//   },
+  //   {
+  //     title: "",
+  //     content: "",
+  //   },
 ];
 
 const Faq = () => {
@@ -65,6 +65,7 @@ const Wrapper = styled.div`
 `;
 
 const Section = styled.section`
+  color: #faf6f7;
   width: 100%;
   padding: 40px;
   @media (max-width: 900px) {

@@ -49,6 +49,7 @@ const Benefit = styled.div`
 `;
 
 const Section = styled.section`
+  color: #faf6f7;
   width: 100%;
   padding: 130px;
   gap: 80px;

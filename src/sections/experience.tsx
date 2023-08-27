@@ -54,7 +54,8 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
-  h3,p {
+  h3,
+  p {
     margin: 0;
   }
   width: 100%;
@@ -72,6 +73,7 @@ const Wrapper = styled.div`
 `;
 
 const Section = styled.section`
+  color: #faf6f7;
   width: 100%;
   padding: 40px;
   @media (max-width: 900px) {
