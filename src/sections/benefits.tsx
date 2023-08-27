@@ -2,24 +2,36 @@ import styled from "styled-components";
 import MailIcon from "@/components/icons/Mail";
 import HeartIcon from "@/components/icons/Heart";
 import RedoIcon from "@/components/icons/Redo";
+import { RevealWrapper } from "next-reveal";
+import TextWrapper from "@/components/TextWrapper";
 
 const Benefits = () => {
   return (
     <Section>
-      <h1>O job que você quer no momento que você precisa</h1>
+      <RevealWrapper delay={200}>
+        <TextWrapper>
+          <h1>O job que você quer no momento que você precisa</h1>
+        </TextWrapper>
+      </RevealWrapper>
       <BenefitWrapper>
-        <Benefit>
-          <MailIcon />
-          <p>Assine um de nossos planos e solicite quantas demandas quiser</p>
-        </Benefit>
-        <Benefit>
-          <HeartIcon />
-          <p>Entrega finalizada em poucos dias, de segunda a sexta</p>
-        </Benefit>
-        <Benefit>
-          <RedoIcon />
-          <p>Revisamos tudo até você ficar 100% satisfeito</p>
-        </Benefit>
+        <RevealWrapper delay={100}>
+          <Benefit>
+            <MailIcon />
+            <p>Assine um de nossos planos e solicite quantas demandas quiser</p>
+          </Benefit>
+        </RevealWrapper>
+        <RevealWrapper delay={300}>
+          <Benefit>
+            <HeartIcon />
+            <p>Entrega finalizada em poucos dias, de segunda a sexta</p>
+          </Benefit>
+        </RevealWrapper>
+        <RevealWrapper delay={500}>
+          <Benefit>
+            <RedoIcon />
+            <p>Revisamos tudo até você ficar 100% satisfeito</p>
+          </Benefit>
+        </RevealWrapper>
       </BenefitWrapper>
     </Section>
   );
@@ -36,6 +48,10 @@ const BenefitWrapper = styled.div`
 `;
 
 const Benefit = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
   width: 100%;
   svg {
     width: 50px;

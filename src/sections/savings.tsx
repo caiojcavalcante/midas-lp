@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import CountUp from "react-countup";
+import { RevealWrapper } from "next-reveal";
 import { useMediaQuery } from "@/components/useMediaQuery";
 
 const Savings = () => {
@@ -37,124 +38,125 @@ const Savings = () => {
 
   return (
     <Section id="benefits" ref={ref} isNonMobileScreen={isNonMobileScreen}>
-      <h2>
-        Com a midas, você <mark>ECONOMIZA</mark>
-      </h2>
-      <div>
-        {counterOn && (
-          <h2>
-            <mark>
-              <>
-                R${" "}
+      <RevealWrapper>
+        <h2>
+          Com a midas, você <mark>ECONOMIZA</mark>
+        </h2>
+        <div>
+          {counterOn && (
+            <h2>
+              <mark>
+                <>
+                  R${" "}
+                  <CountUp
+                    delay={0}
+                    duration={1.2}
+                    start={0}
+                    end={precoDesigner}
+                    decimals={2}
+                    decimal=","
+                    separator=" "
+                    onEnd={() => setCounter(counter + 1)}
+                    onStart={() => setFont(false)}
+                  />
+                </>
+              </mark>
+              {" um designer"}
+            </h2>
+          )}
+          {counter > 0 && (
+            <h2>
+              <mark>
+                {counterOn && (
+                  <>
+                    R${" "}
+                    <CountUp
+                      delay={0}
+                      duration={1.2}
+                      start={0}
+                      end={precoCopy}
+                      decimals={2}
+                      decimal=","
+                      separator=" "
+                      onEnd={() => setCounter(counter + 1)}
+                    />
+                  </>
+                )}
+              </mark>
+              {" um copywritter"}
+            </h2>
+          )}
+          {counter > 1 && (
+            <h2>
+              <mark>
+                {counterOn && (
+                  <>
+                    R${" "}
+                    <CountUp
+                      delay={0}
+                      duration={1.2}
+                      start={0}
+                      end={precoGestor}
+                      decimals={2}
+                      decimal=","
+                      separator=" "
+                      onEnd={() => setCounter(counter + 1)}
+                    />
+                  </>
+                )}
+              </mark>
+              {" um gestor de tráfego"}
+            </h2>
+          )}
+          {counter > 2 && (
+            <h2>
+              <mark>
+                {counterOn && (
+                  <>
+                    R${" "}
+                    <CountUp
+                      delay={0}
+                      duration={1.2}
+                      start={0}
+                      end={precoFront}
+                      decimals={2}
+                      decimal=","
+                      separator=" "
+                      onEnd={() => setCounter(counter + 1)}
+                    />
+                  </>
+                )}
+              </mark>
+              {" um desenvolvedor de software front-end"}
+            </h2>
+          )}
+          {counterOn && (
+            <Price>
+              <mark>
+                {"R$ "}
                 <CountUp
                   delay={0}
-                  duration={1.2}
+                  duration={4.8}
                   start={0}
-                  end={precoDesigner}
+                  end={precoTotal}
                   decimals={2}
                   decimal=","
                   separator=" "
-                  onEnd={() => setCounter(counter + 1)}
-                  onStart={() => setFont(false)}
+                  onEnd={() => setFont(true)}
                 />
-              </>
-            </mark>
-            {" um designer"}
-          </h2>
-        )}
-        {counter > 0 && (
-          <h2>
-            <mark>
-              {counterOn && (
-                <>
-                  R${" "}
-                  <CountUp
-                    delay={0}
-                    duration={1.2}
-                    start={0}
-                    end={precoCopy}
-                    decimals={2}
-                    decimal=","
-                    separator=" "
-                    onEnd={() => setCounter(counter + 1)}
-                  />
-                </>
-              )}
-            </mark>
-            {" um copywritter"}
-          </h2>
-        )}
-        {counter > 1 && (
-          <h2>
-            <mark>
-              {counterOn && (
-                <>
-                  R${" "}
-                  <CountUp
-                    delay={0}
-                    duration={1.2}
-                    start={0}
-                    end={precoGestor}
-                    decimals={2}
-                    decimal=","
-                    separator=" "
-                    onEnd={() => setCounter(counter + 1)}
-                  />
-                </>
-              )}
-            </mark>
-            {" um gestor de tráfego"}
-          </h2>
-        )}
-        {counter > 2 && (
-          <h2>
-            <mark>
-              {counterOn && (
-                <>
-                  R${" "}
-                  <CountUp
-                    delay={0}
-                    duration={1.2}
-                    start={0}
-                    end={precoFront}
-                    decimals={2}
-                    decimal=","
-                    separator=" "
-                    onEnd={() => setCounter(counter + 1)}
-                  />
-                </>
-              )}
-            </mark>
-            {" um desenvolvedor de software front-end"}
-          </h2>
-        )}
-        {counterOn && (
-          <Price>
-            <mark>
-              {"R$ "}
-              <CountUp
-                delay={0}
-                duration={4.8}
-                start={0}
-                end={precoTotal}
-                decimals={2}
-                decimal=","
-                separator=" "
-                onEnd={() => setFont(true)}
-              />
-            </mark>
-            {font && isNonMobileScreen && <p>por mês</p>}
-          </Price>
-        )}
-        {font && <h3>(fonte: Glassdoor)</h3>}
-      </div>
+              </mark>
+              {font && isNonMobileScreen && <p>por mês</p>}
+            </Price>
+          )}
+          {font && <h3>(fonte: Glassdoor)</h3>}
+        </div>
+      </RevealWrapper>
     </Section>
   );
 };
 const Section = styled.section<{ isNonMobileScreen: boolean }>`
-  font-family: "Gotham", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: ${(p) => p.theme.primary};
-  min-height: 700px;
   width: 100%;
   display: flex;
   flex-direction: column;

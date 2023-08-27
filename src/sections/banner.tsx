@@ -1,16 +1,23 @@
 import Router from "next/router";
 import styled from "styled-components";
+import { RevealWrapper } from "next-reveal";
 
 const Banner = () => {
   return (
     <Section>
       <TextWrapper>
-        <h1>
-          Uma fábrica de Landing pages de <b>alta conversão</b>
-        </h1>
-        <p>Marketing na era digital on-demmand</p>
+        <RevealWrapper delay={200}>
+          <h1>
+            Uma fábrica de Landing pages de <b>alta conversão</b>
+          </h1>
+        </RevealWrapper>
+        <RevealWrapper delay={400}>
+          <p>Marketing na era digital on-demmand</p>
+        </RevealWrapper>
       </TextWrapper>
-      <Button>Ver planos</Button>
+      <RevealWrapper delay={600}>
+        <Button>Ver planos</Button>
+      </RevealWrapper>
     </Section>
   );
 };

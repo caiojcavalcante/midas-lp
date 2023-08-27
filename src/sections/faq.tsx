@@ -1,10 +1,8 @@
 import styled from "styled-components";
-import Card from "@/components/Card";
-import Logo from "@/components/Logo";
-import Check from "@/components/icons/Check";
-import Block from "@/components/icons/Block";
 import Accordion from "@/components/Accordion";
 import { useState } from "react";
+import { RevealWrapper } from "next-reveal";
+import TextWrapper from "@/components/TextWrapper";
 
 const questions = [
   {
@@ -37,19 +35,25 @@ const Faq = () => {
   const [currentAccordion, setCurrentAccordion] = useState<number | null>(null);
   return (
     <Section>
-      <h1>Dúvidas frequentes</h1>
+      <RevealWrapper delay={300}>
+        <TextWrapper>
+          <h1>Dúvidas frequentes</h1>
+        </TextWrapper>
+      </RevealWrapper>
       <Wrapper>
         {questions.map((question, index) => (
-          <Accordion
-            key={index}
-            title={question.title}
-            content={question.content}
-            isOpen={currentAccordion === index}
-            onClickAccordion={() => {
-              if (currentAccordion !== index) setCurrentAccordion(index);
-              else setCurrentAccordion(null);
-            }}
-          />
+          <RevealWrapper key={index} delay={index * 100 + 300}>
+            <Accordion
+              key={index}
+              title={question.title}
+              content={question.content}
+              isOpen={currentAccordion === index}
+              onClickAccordion={() => {
+                if (currentAccordion !== index) setCurrentAccordion(index);
+                else setCurrentAccordion(null);
+              }}
+            />
+          </RevealWrapper>
         ))}
       </Wrapper>
     </Section>

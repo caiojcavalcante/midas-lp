@@ -33,15 +33,15 @@ export default function Home() {
       <ThemeProvider theme={darkTheme}>
         <Header />
         <Banner />
-        <Phrase />
         <Benefits />
+        <Savings />
+        {/* <Phrase /> */}
         <ForgetTheOldWay />
-        <Experience />
+        {/* <Experience /> */}
         <Target />
         <Contract />
         <Faq />
         <Cta />
-        {/* <Savings /> */}
         {/* <Email /> */}
         {/* <Testimonials /> */}
         {/* <Benefits /> */}

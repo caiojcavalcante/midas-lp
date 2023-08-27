@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 700;
   }
   h1, h2, h3, h4,p {
+    font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
   }

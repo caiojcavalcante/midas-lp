@@ -1,121 +1,131 @@
 import styled from "styled-components";
 import Card from "@/components/Card";
-import Logo from "@/components/Logo";
 import Check from "@/components/icons/Check";
-import Block from "@/components/icons/Block";
+import { RevealWrapper } from "next-reveal";
+import TextWrapper from "@/components/TextWrapper";
 
 const ForgetTheOldWay = () => {
   return (
     <Section>
-      <h1>Cresça e se destaque com os nossos planos</h1>
+      <RevealWrapper delay={200}>
+        <TextWrapper>
+          <h1>Cresça e se destaque com os nossos planos</h1>
+        </TextWrapper>
+      </RevealWrapper>
       <Wrapper>
-        <Card maxWidth={1000}>
-          <ListWrapper>
-            <div>
-              <Tag>MAIS ESCOLHIDO</Tag>
-              <h2>Completo</h2>
-              <p>Uma demanda por vez</p>
-            </div>
-            <div>
-              <h3>
-                <b>R$ 500,00</b> /semana
-              </h3>
-              <h4>
-                <b>R$ 2.000,00</b> /mês
-              </h4>
-            </div>
-            <ul>
-              <li>
-                <div>
-                  <Check />
-                </div>
-                <p>Uma entrega de cada vez</p>
-              </li>
-              <li>
-                <div>
-                  <Check />
-                </div>
-                <p>Solicitações ilimitadas</p>
-              </li>
-              <li>
-                <div>
-                  <Check />
-                </div>
-                <p>Revisões ilimitadas</p>
-              </li>
-              <li>
-                <div>
-                  <Check />
-                </div>
-                <p>Marcas ilimitadas</p>
-              </li>
-              <li>
-                <div>
-                  <Check />
-                </div>
-                <p>Membros de equipe ilimitados</p>
-              </li>
-            </ul>
-            <Button>Quero contratar!</Button>
-          </ListWrapper>
-        </Card>
-        <Card maxWidth={1000}>
-          <ListWrapper>
-            <div>
-              <div />
-              <h2>Customizado</h2>
-              <p>Full-time</p>
-            </div>
-            <div>
-              <h3>Preço personalizado</h3>
-            </div>
-            <ul>
-              <li>
-                <div>
-                  <Check />
-                </div>
-                Entrega acelerada
-              </li>
-              <li>
-                <div>
-                  <Check />
-                </div>
-                Reuniões semanais (se necessário)
-              </li>
-              <li>
-                <div>
-                  <Check />
-                </div>
-                Várias solicitações ao mesmo tempo
-              </li>
-              <li>
-                <div>
-                  <Check />
-                </div>
-                Solicitações ilimitadas
-              </li>
-              <li>
-                <div>
-                  <Check />
-                </div>
-                Revisões ilimitadas
-              </li>
-              <li>
-                <div>
-                  <Check />
-                </div>
-                Marcas ilimitadas
-              </li>
-              <li>
-                <div>
-                  <Check />
-                </div>
-                Colaboração em tempo real via WhatsApp / Slack / Discord
-              </li>
-            </ul>
-            <Button>Quero contratar!</Button>
-          </ListWrapper>
-        </Card>
+        <RevealWrapper delay={300}>
+          <Card maxWidth={1000}>
+            <ListWrapper>
+              <div>
+                <Tag>MAIS ESCOLHIDO</Tag>
+                <h2>Completo</h2>
+                <p>Uma demanda por vez</p>
+              </div>
+              <div>
+                <h3>
+                  <b>R$ 500,00</b> /semana
+                </h3>
+                <h4>
+                  <b>R$ 2.000,00</b> /mês
+                </h4>
+              </div>
+              <ul>
+                <li>
+                  <div>
+                    <Check />
+                  </div>
+                  <p>Uma entrega de cada vez</p>
+                </li>
+                <li>
+                  <div>
+                    <Check />
+                  </div>
+                  <p>Solicitações ilimitadas</p>
+                </li>
+                <li>
+                  <div>
+                    <Check />
+                  </div>
+                  <p>Revisões ilimitadas</p>
+                </li>
+                <li>
+                  <div>
+                    <Check />
+                  </div>
+                  <p>Marcas ilimitadas</p>
+                </li>
+                <li>
+                  <div>
+                    <Check />
+                  </div>
+                  <p>Membros de equipe ilimitados</p>
+                </li>
+              </ul>
+              <Button>Quero contratar!</Button>
+            </ListWrapper>
+          </Card>
+        </RevealWrapper>
+        <RevealWrapper delay={600}>
+          <Card maxWidth={1000}>
+            <ListWrapper>
+              <div>
+                <div />
+                <h2>Customizado</h2>
+                <p>Full-time</p>
+              </div>
+              <div>
+                <h3>
+                  <b>Preço personalizado</b>
+                </h3>
+              </div>
+              <ul>
+                <li>
+                  <div>
+                    <Check />
+                  </div>
+                  Entrega acelerada
+                </li>
+                <li>
+                  <div>
+                    <Check />
+                  </div>
+                  Reuniões semanais (se necessário)
+                </li>
+                <li>
+                  <div>
+                    <Check />
+                  </div>
+                  Várias solicitações ao mesmo tempo
+                </li>
+                <li>
+                  <div>
+                    <Check />
+                  </div>
+                  Solicitações ilimitadas
+                </li>
+                <li>
+                  <div>
+                    <Check />
+                  </div>
+                  Revisões ilimitadas
+                </li>
+                <li>
+                  <div>
+                    <Check />
+                  </div>
+                  Marcas ilimitadas
+                </li>
+                <li>
+                  <div>
+                    <Check />
+                  </div>
+                  Colaboração em tempo real via WhatsApp / Slack / Discord
+                </li>
+              </ul>
+              <Button>Quero contratar!</Button>
+            </ListWrapper>
+          </Card>
+        </RevealWrapper>
       </Wrapper>
     </Section>
   );
@@ -196,6 +206,9 @@ const Wrapper = styled.div`
   gap: 20px;
   width: 100%;
   max-width: 1000px;
+  div {
+    display: flex;
+  }
 `;
 
 const Section = styled.section`

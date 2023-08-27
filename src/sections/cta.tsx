@@ -1,17 +1,20 @@
 import styled from "styled-components";
 import Card from "@/components/Card";
+import { RevealWrapper } from "next-reveal";
 
 const Cta = () => {
   return (
     <Section>
       <Wrapper>
-        <Card maxWidth={1100}>
-          <Container>
-            <h1>Ainda está em dúvida se realmente vale a pena?</h1>
-            <p>Podemos te ajudar. Vamos conversar!</p>
-            <Button>Fale com um especialista</Button>
-          </Container>
-        </Card>
+        <RevealWrapper delay={400}>
+          <Card maxWidth={1100}>
+            <Container>
+              <h1>Ainda está em dúvida se realmente vale a pena?</h1>
+              <p>Podemos te ajudar. Vamos conversar!</p>
+              <Button>Fale com um especialista</Button>
+            </Container>
+          </Card>
+        </RevealWrapper>
       </Wrapper>
     </Section>
   );
