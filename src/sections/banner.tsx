@@ -16,7 +16,7 @@ const Banner = () => {
 };
 
 const Button = styled.button`
-  color: #faf6f7;
+  color: #000;
   background-color: ${(p) => p.theme.alt};
   padding: 20px 60px;
   border-radius: 7px;
