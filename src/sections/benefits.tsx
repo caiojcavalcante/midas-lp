@@ -1,80 +1,74 @@
-import { useMediaQuery } from "@/components/useMediaQuery";
 import styled from "styled-components";
-import Image from "next/image";
+import MailIcon from "@/components/icons/Mail";
+import HeartIcon from "@/components/icons/Heart";
+import RedoIcon from "@/components/icons/Redo";
 
 const Benefits = () => {
   return (
     <Section>
-      <div className="wrapper">
-        <h1>Benefícios</h1>
-        <div className="article">
-          <h2>Lorem Ipsum</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-            dignissimos facilis animi facere tenetur excepturi cupiditate error
-            commodi perspiciatis sint aperiam laudantium, recusandae at qui non
-            mollitia ab accusamus quae.
-          </p>
-        </div>
-        <div className="invertedArticle">
-          <h2>Lorem Ipsum</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-            dignissimos facilis animi facere tenetur excepturi cupiditate error
-            commodi perspiciatis sint aperiam laudantium, recusandae at qui non
-            mollitia ab accusamus quae.
-          </p>
-        </div>
-        <div className="article">
-          <h2>Lorem Ipsum</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-            dignissimos facilis animi facere tenetur excepturi cupiditate error
-            commodi perspiciatis sint aperiam laudantium, recusandae at qui non
-            mollitia ab accusamus quae.
-          </p>
-        </div>
-      </div>
+      <h1>O job que você quer no momento que você precisa</h1>
+      <BenefitWrapper>
+        <Benefit>
+          <MailIcon />
+          <p>Assine um de nossos planos e solicite quantas demandas quiser</p>
+        </Benefit>
+        <Benefit>
+          <HeartIcon />
+          <p>Entrega finalizada em poucos dias, de segunda a sexta</p>
+        </Benefit>
+        <Benefit>
+          <RedoIcon />
+          <p>Revisamos tudo até você ficar 100% satisfeito</p>
+        </Benefit>
+      </BenefitWrapper>
     </Section>
   );
 };
 
+const BenefitWrapper = styled.div`
+  display: flex;
+  box-sizing: border-box;
+  gap: 40px;
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+  margin: 0;
+`;
+
+const Benefit = styled.div`
+  width: 100%;
+  svg {
+    width: 50px;
+    color: #fd0;
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    max-width: 300px;
+  }
+`;
+
 const Section = styled.section`
-  font-family: "Gotham", sans-serif;
+  width: 100%;
+  padding: 130px;
+  gap: 80px;
+  @media (max-width: 900px) {
+    padding: 40px;
+  }
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  color: #faf7f6;
-  padding: 2rem 0;
-  .wrapper {
-    text-align: center;
-    div {
-      text-align: start;
+  justify-content: center;
+  text-align: center;
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    width: 70%;
+    @media (max-width: 900px) {
+      font-size: 2.5rem;
+      width: 100%;
     }
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 90vh;
-    max-width: 740px;
-    gap: 4rem;
-    p {
-      font-weight: 600;
-      width: 60%;
-    }
-    h2 {
-      font-weight: 700;
-    }
-  }
-  .article {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .invertedArticle {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
   }
 `;
 export default Benefits;

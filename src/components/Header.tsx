@@ -12,10 +12,19 @@ const Header = () => {
       {isNonMobileScreen && (
         <NavLinkWrapper>
           <NavLink padding="1rem" to="#benefits">
-            Vantagens
+            Como funciona
           </NavLink>
           <NavLink padding="1rem" to="#email">
-            Contato
+            Cases
+          </NavLink>
+          <NavLink padding="1rem" to="#email">
+            Escopo
+          </NavLink>
+          <NavLink padding="1rem" to="#email">
+            Planos
+          </NavLink>
+          <NavLink padding="1rem" to="#email">
+            Dúvidas
           </NavLink>
         </NavLinkWrapper>
       )}
@@ -27,19 +36,22 @@ const NavLinkWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 15rem;
-  width: 20%;
   height: 100%;
 `;
 const HeaderContainer = styled.div`
   border: none;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  @media (max-width: 1100px) {
+    justify-content: center;
+  }
   align-items: center;
-  justify-content: center;
   background-color: ${(p) => p.theme.primary};
   width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 1rem 0;
+  /* background-color: red; */
 `;
 
 export default Header;

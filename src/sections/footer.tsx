@@ -12,7 +12,8 @@ const Footer = () => {
 };
 
 const Section = styled.section`
-  font-family: "Gotham", sans-serif;
+  /* font-family: "Gotham", sans-serif; */
+  color: #000;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;

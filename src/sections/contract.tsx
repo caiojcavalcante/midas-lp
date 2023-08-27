@@ -1,162 +1,226 @@
-import Router from "next/router";
 import styled from "styled-components";
-import { useMediaQuery } from "@/components/useMediaQuery";
+import Card from "@/components/Card";
+import Logo from "@/components/Logo";
+import Check from "@/components/icons/Check";
+import Block from "@/components/icons/Block";
 
-const contract = () => {
-  const isNonMobileScreen = useMediaQuery(1100);
-
+const ForgetTheOldWay = () => {
   return (
-    <Section id="contract" isNonMobileScreen={isNonMobileScreen}>
-      <Wrapper isNonMobileScreen={isNonMobileScreen}>
-        <Card>
-          <List>
-            <Title>Midas Growth</Title>
-            <Description>
-              O plano básico para o crescimento de uma empresa, um plano enxuto,
-              com os principais benefícios
-            </Description>
-            <Benefit mark>Landing page</Benefit>
-            <Benefit>Análise e planejamento de marketing digital</Benefit>
-            <Benefit>Estratégias de marketing de conteúdo</Benefit>
-            <Benefit>Otimização de mecanismos de busca(SEO)</Benefit>
-            <Benefit>
-              Relatórios e apresentações de resultados mensais e recomendações
-              para melhoria contínua
-            </Benefit>
-          </List>
-          <Button
-            onClick={() => Router.push("https://wa.link/ifyvwo")}
-            isNonMobileScreen={isNonMobileScreen}
-          >
-            Contratar
-          </Button>
+    <Section>
+      <h1>Cresça e se destaque com os nossos planos</h1>
+      <Wrapper>
+        <Card maxWidth={1000}>
+          <ListWrapper>
+            <div>
+              <Tag>MAIS ESCOLHIDO</Tag>
+              <h2>Completo</h2>
+              <p>Uma demanda por vez</p>
+            </div>
+            <div>
+              <h3>
+                <b>R$ 500,00</b> /semana
+              </h3>
+              <h4>
+                <b>R$ 2.000,00</b> /mês
+              </h4>
+            </div>
+            <ul>
+              <li>
+                <div>
+                  <Check />
+                </div>
+                <p>Uma entrega de cada vez</p>
+              </li>
+              <li>
+                <div>
+                  <Check />
+                </div>
+                <p>Solicitações ilimitadas</p>
+              </li>
+              <li>
+                <div>
+                  <Check />
+                </div>
+                <p>Revisões ilimitadas</p>
+              </li>
+              <li>
+                <div>
+                  <Check />
+                </div>
+                <p>Marcas ilimitadas</p>
+              </li>
+              <li>
+                <div>
+                  <Check />
+                </div>
+                <p>Membros de equipe ilimitados</p>
+              </li>
+            </ul>
+            <Button>Quero contratar!</Button>
+          </ListWrapper>
         </Card>
-        <Card>
-          <List>
-            <Title>Midas Pro</Title>
-            <Description>
-              O Plano Premium é uma opção para empresas que precisam de um
-              suporte personalizado e mais recursos para suas campanhas de
-              marketing online.
-            </Description>
-            <Benefit mark>Todos os benefícios do Midas Growth</Benefit>
-            <Benefit mark>Para investimentos a partir de 10 mil reais</Benefit>
-            <Benefit>
-              Suporte VIP via whatsapp de um de nossos conselheiros
-            </Benefit>
-          </List>
-          <Button
-            onClick={() => Router.push("https://wa.link/ifyvwo")}
-            isNonMobileScreen={isNonMobileScreen}
-          >
-            Contratar
-          </Button>
-        </Card>
-        <Card>
-          <List>
-            <Title>Midas Launch</Title>
-            <Description>
-              Um plano personalizado para quem quer lançar serviços,
-              treinamentos ou produtos no mercado
-            </Description>
-            <Benefit mark>Tráfego para lançamento</Benefit>
-            <Benefit>Assessoria completa direcionada para lançamentos</Benefit>
-            <Benefit>Estratégias de marketing de conteúdo</Benefit>
-            <Benefit>Sites necessários para seu lançamento</Benefit>
-            <Benefit>Suporte personalizado</Benefit>
-          </List>
-          <Button
-            onClick={() => Router.push("https://wa.link/ifyvwo")}
-            isNonMobileScreen={isNonMobileScreen}
-          >
-            Contratar
-          </Button>
+        <Card maxWidth={1000}>
+          <ListWrapper>
+            <div>
+              <div />
+              <h2>Customizado</h2>
+              <p>Full-time</p>
+            </div>
+            <div>
+              <h3>Preço personalizado</h3>
+            </div>
+            <ul>
+              <li>
+                <div>
+                  <Check />
+                </div>
+                Entrega acelerada
+              </li>
+              <li>
+                <div>
+                  <Check />
+                </div>
+                Reuniões semanais (se necessário)
+              </li>
+              <li>
+                <div>
+                  <Check />
+                </div>
+                Várias solicitações ao mesmo tempo
+              </li>
+              <li>
+                <div>
+                  <Check />
+                </div>
+                Solicitações ilimitadas
+              </li>
+              <li>
+                <div>
+                  <Check />
+                </div>
+                Revisões ilimitadas
+              </li>
+              <li>
+                <div>
+                  <Check />
+                </div>
+                Marcas ilimitadas
+              </li>
+              <li>
+                <div>
+                  <Check />
+                </div>
+                Colaboração em tempo real via WhatsApp / Slack / Discord
+              </li>
+            </ul>
+            <Button>Quero contratar!</Button>
+          </ListWrapper>
         </Card>
       </Wrapper>
     </Section>
   );
 };
-const Section = styled.section<{ isNonMobileScreen: boolean }>`
+
+const Tag = styled.div`
+  background-color: #fd0;
+  width: fit-content;
+  padding: 5px 10px;
+  color: #000;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.8rem;
+`;
+
+const ListWrapper = styled.div`
+  font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: ${(p) => (p.isNonMobileScreen ? "115rem" : "40rem")};
-  background-color: ${(p) => p.theme.primary};
-  /* background-color: red; */
-`;
-const Wrapper = styled.div<{ isNonMobileScreen: boolean }>`
-  height: 100%;
-  max-width: 80rem;
-  display: flex;
-  flex-direction: ${(p) => (p.isNonMobileScreen ? "column" : "row")};
-  justify-content: center;
-  align-items: center;
-`;
-const Card = styled.div`
-  opacity: 0.9;
-  /* -webkit-backdrop-filter: blur(2em);
-  backdrop-filter: blur(1rem); */
-  display: flex;
-  padding: 2rem 1.5rem 2rem 1.5rem;
-  flex-direction: column;
+  text-align: left;
   justify-content: space-between;
-  align-items: center;
-  /* background-image: linear-gradient(230deg, #050505 0%, #14110f 100%); */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
-  height: 30rem;
-  max-height: 80%;
-  width: 80%;
-  margin: 2rem;
-  border-radius: 1rem;
-  &:hover {
-    transition: all 0.5s ease-in-out;
-    transform: scale(1.005);
-    Button {
-      background-color: #fddd00;
+  height: 100%;
+  width: fit-content;
+  gap: 40px;
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  h3,
+  h4 {
+    font-weight: 400;
+    font-size: 1rem;
+    b {
+      font-size: 1.5rem;
+    }
+  }
+  li {
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fd0;
+      width: 18px;
+      height: 18px;
+      border-radius: 2px;
+      svg {
+        color: #000;
+      }
     }
   }
 `;
-const Title = styled.h1`
-  font-family: "DM Sans", sans-serif;
-  text-align: center;
-  margin: 1.5rem 0 2.5rem 0;
-  font-weight: 700;
-  font-size: 2rem;
-  color: ${(p) => p.theme.alt};
-`;
-const Description = styled.p`
-  color: #aaa;
-  font-size: 0.9rem;
-  font-weight: 400;
-`;
-const List = styled.div`
-  color: ${(p) => p.theme.main};
-  font-size: 0.9rem;
-  font-weight: 500;
-`;
-const Benefit = styled.div<{ mark?: boolean }>`
-  margin: 1rem 0 1rem 0;
-  color: ${(p) => (p.mark ? p.theme.alt : p.theme.main)};
-`;
-const Button = styled.button<{ isNonMobileScreen?: boolean }>`
-  //use a fonte DM Sans
-  font-family: "DM Sans", sans-serif;
-  font-weight: bold;
-  background-color: ${(p) =>
-    p.isNonMobileScreen ? p.theme.alt : p.theme.secondary};
-  color: ${(p) => p.theme.primary};
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+
+const Button = styled.button`
+  background-color: #fd0;
+  color: #000;
   border: none;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 5px;
+  padding: 20px 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
   font-size: 1rem;
-  width: 100%;
-  height: 3rem;
-  margin: 0;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  width: fit-content;
+
+  &:hover {
+    cursor: pointer;
+    will-change: transform;
+    transform: scale(1.1);
+  }
 `;
 
-export default contract;
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+`;
+
+const Section = styled.section`
+  width: 100%;
+  padding: 40px;
+  @media (max-width: 900px) {
+    padding: 15px;
+  }
+  box-sizing: border-box;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    width: 70%;
+    @media (max-width: 900px) {
+      font-size: 2.5rem;
+      width: 100%;
+    }
+  }
+`;
+export default ForgetTheOldWay;
