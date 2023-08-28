@@ -37,7 +37,7 @@ const Savings = () => {
   }, []);
 
   return (
-    <Section id="benefits" ref={ref} isNonMobileScreen={isNonMobileScreen}>
+    <Section id="economia" ref={ref} isNonMobileScreen={isNonMobileScreen}>
       <RevealWrapper>
         <h2>
           Com a midas, você <mark>ECONOMIZA</mark>

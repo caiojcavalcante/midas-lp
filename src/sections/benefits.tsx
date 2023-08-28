@@ -7,7 +7,7 @@ import TextWrapper from "@/components/TextWrapper";
 
 const Benefits = () => {
   return (
-    <Section>
+    <Section id="como-funciona">
       <RevealWrapper delay={200}>
         <TextWrapper>
           <h1>O job que você quer no momento que você precisa</h1>

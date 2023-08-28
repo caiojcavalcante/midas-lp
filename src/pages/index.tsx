@@ -24,8 +24,8 @@ export default function Home() {
         <title>Midas </title>
       </Head>
       <ThemeProvider theme={darkTheme}>
-        <Header />
         <Banner />
+        <Header />
         <Savings />
         {/* <Contract /> */}
         {/* <Email /> */}

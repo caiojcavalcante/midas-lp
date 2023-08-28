@@ -3,29 +3,33 @@ import Logo from "@/components/Logo";
 import styled from "styled-components";
 import NavLink from "@/components/NavLink";
 import { useMediaQuery } from "@/components/useMediaQuery";
+import { useState, useEffect } from "react";
+import DarkLogo from "./DarkLogo";
 
 const Header = () => {
-    const isNonMobileScreen = useMediaQuery(1100);
+  const isNonMobileScreen = useMediaQuery(1100);
+  //check if has scrolled
+
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setHasScrolled(window.scrollY > 100);
+    });
+  }, [hasScrolled]);
+
   return (
-    <HeaderContainer>
+    <HeaderContainer hasScrolled={hasScrolled}>
       <Logo />
       {isNonMobileScreen && (
         <NavLinkWrapper>
-          <NavLink padding="1rem" to="#benefits">
-            Como funciona
-          </NavLink>
-          <NavLink padding="1rem" to="#email">
-            Cases
-          </NavLink>
-          <NavLink padding="1rem" to="#email">
-            Escopo
-          </NavLink>
-          <NavLink padding="1rem" to="#email">
-            Planos
-          </NavLink>
-          <NavLink padding="1rem" to="#email">
-            Dúvidas
-          </NavLink>
+          <NavLink to="#como-funciona">Como funciona</NavLink>
+          <NavLink to="#economia">Economia</NavLink>
+          <NavLink to="#escopo">Escopo</NavLink>
+          <NavLink to="#planos">Planos</NavLink>
+          <NavLink to="#faq">Dúvidas</NavLink>
         </NavLinkWrapper>
       )}
     </HeaderContainer>
@@ -37,21 +41,48 @@ const NavLinkWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  gap: 20px;
 `;
-const HeaderContainer = styled.div`
-  border: none;
+
+//disable bbackground while not scrolled
+const HeaderContainer = styled.div<{ hasScrolled: boolean }>`
+  position: fixed;
+  ${({ hasScrolled }) =>
+    hasScrolled &&
+    `
+    border-bottom: 1px solid #777;
+    `}
+
+  width: 100%;
+  height: 80px;
+  z-index: 100;
+  /* border: none; */
   display: flex;
   justify-content: space-between;
   @media (max-width: 1100px) {
     justify-content: center;
   }
   align-items: center;
-  background-color: ${(p) => p.theme.primary};
+  background-color: #0000;
+  ${({ hasScrolled }) =>
+    hasScrolled &&
+    `
+    background-color: #000d;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    `}
+
   width: 100%;
-  max-width: 1000px;
   margin: 0 auto;
   padding: 1rem 0;
-  /* background-color: red; */
+
+  @media (min-width: 1100px) {
+    padding: 1rem 200px;
+  }
+  box-sizing: border-box;
+  a {
+    color: #fff;
+  }
 `;
 
 export default Header;

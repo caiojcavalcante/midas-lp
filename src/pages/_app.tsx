@@ -4,6 +4,10 @@ import { Roboto } from "@next/font/google";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+section {
+  scroll-margin-top: 80px;
+
+}
   html {
     scroll-behavior: smooth;
   }

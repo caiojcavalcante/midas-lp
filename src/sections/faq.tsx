@@ -34,7 +34,7 @@ const questions = [
 const Faq = () => {
   const [currentAccordion, setCurrentAccordion] = useState<number | null>(null);
   return (
-    <Section>
+    <Section id="faq">
       <RevealWrapper delay={300}>
         <TextWrapper>
           <h1>Dúvidas frequentes</h1>

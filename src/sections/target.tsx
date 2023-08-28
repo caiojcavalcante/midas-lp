@@ -54,9 +54,11 @@ const ForgetTheOldWay = () => {
 
 const ListWrapper = styled.div`
   display: grid;
+  box-sizing: border-box;
   grid-template-columns: 1fr 1fr;
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
   }
   gap: 40px;
 `;

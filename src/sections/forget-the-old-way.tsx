@@ -8,7 +8,7 @@ import TextWrapper from "@/components/TextWrapper";
 
 const ForgetTheOldWay = () => {
   return (
-    <Section>
+    <Section id="escopo">
       <RevealWrapper delay={500}>
         <TextWrapper>
           <h1>Esqueça a forma antiga e burocrática de contratar</h1>

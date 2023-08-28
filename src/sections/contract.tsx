@@ -6,7 +6,7 @@ import TextWrapper from "@/components/TextWrapper";
 
 const ForgetTheOldWay = () => {
   return (
-    <Section>
+    <Section id="planos">
       <RevealWrapper delay={200}>
         <TextWrapper>
           <h1>Cresça e se destaque com os nossos planos</h1>
