@@ -28,6 +28,9 @@ const AccordionTitle = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+  div {
+    width: 15px;
+  }
 `;
 
 const AccordionContent = styled.div<{ open: boolean }>`
@@ -49,7 +52,9 @@ const Accordion: React.FC<AccordionProps> = ({
   return (
     <AccordionItem onClick={onClickAccordion}>
       <AccordionTitle>
-        <h2>{isOpen ? "- " : "+ "}</h2>
+        <div>
+          <h2>{isOpen ? "-" : "+"}</h2>
+        </div>
         <h3>{title}</h3>
       </AccordionTitle>
       <AccordionContent open={isOpen}>

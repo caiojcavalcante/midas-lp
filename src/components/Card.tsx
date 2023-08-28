@@ -20,6 +20,10 @@ const Container = styled.div<{ borderless: boolean; maxWidth: number }>`
   display: flex;
   flex-direction: column;
 
+  div {
+    display: flex;
+  }
+
   gap: 40px;
 
   background-color: #000;
