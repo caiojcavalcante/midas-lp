@@ -50,7 +50,7 @@ section {
 `;
 
 const montserrat = Montserrat({
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "800", "900"],
   style: ["normal", "italic"],
   subsets: ["latin"],
 });
