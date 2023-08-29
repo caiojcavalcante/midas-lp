@@ -166,7 +166,6 @@ const Section = styled.section`
   margin: 2rem auto;
   border-radius: 2rem;
   padding: 2rem 0;
-  font-family: "Gotham", sans-serif;
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -204,7 +203,6 @@ const Section = styled.section`
     border: none;
     background: linear-gradient(40deg, #1d1d1e 0%, #1a1a1d 100%);
     color: #faf7f6;
-    font-family: "Gotham", sans-serif;
     font-weight: 600;
     text-decoration-color: #fddd00;
     :focus {

@@ -27,7 +27,6 @@ const Testimonials = () => {
 };
 
 const Section = styled.section`
-  font-family: "Gotham", sans-serif;
   font-weight: 600;
   display: flex;
   justify-content: center;

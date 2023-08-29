@@ -112,7 +112,6 @@ const Section = styled.section`
     width: 500px;
     max-width: 90vw;
     span {
-      font-family: "Gotham", sans-serif;
       color: #fddd00;
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: black;
@@ -125,7 +124,6 @@ const Section = styled.section`
     user-select: none;
     -webkit-user-select: none;
   }
-  font-family: "Gotham", sans-serif;
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -147,7 +145,6 @@ const Section = styled.section`
       justify-content: center;
       align-items: center;
       gap: 0.5rem;
-      font-family: "Gotham", sans-serif;
       width: 100%;
       height: 50%;
       border-radius: 2rem;
