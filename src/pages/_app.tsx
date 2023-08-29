@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
 import type { AppProps } from "next/app";
-import { Roboto } from "@next/font/google";
+import { Roboto, Montserrat } from "@next/font/google";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -49,8 +49,8 @@ section {
 }
 `;
 
-const roboto = Roboto({
-  weight: ["400", "500", "700"],
+const montserrat = Montserrat({
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
 });
@@ -58,7 +58,7 @@ const roboto = Roboto({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <main className={roboto.className}>
+      <main className={montserrat.className}>
         <GlobalStyle />
         <Component {...pageProps} />
         <Analytics />
