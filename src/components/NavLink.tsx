@@ -14,7 +14,7 @@ const NavLink = ({ to, children }: NavLinkProps) => {
   );
 };
 const StyledLink = styled(Link)`
-  font-family: "Montserrat", sans-serif;
+  
   font-weight: 500;
   font-size: 1.2rem;
   text-decoration: none;

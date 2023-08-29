@@ -1,8 +1,9 @@
-import Router from "next/router";
+import { useRouter } from "next/router";
 import styled from "styled-components";
 import { RevealWrapper } from "next-reveal";
 
 const Banner = () => {
+  const Router = useRouter();
   return (
     <Section>
       <TextWrapper>
@@ -41,6 +42,7 @@ const Button = styled.button`
 `;
 
 const TextWrapper = styled.div`
+  
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -78,7 +80,7 @@ const Section = styled.section`
   align-items: center;
   justify-content: center;
 
-  font-family: "Montserrat", sans-serif;
+  
 
   &:before {
     content: "";

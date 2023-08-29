@@ -155,7 +155,7 @@ const Savings = () => {
   );
 };
 const Section = styled.section<{ isNonMobileScreen: boolean }>`
-  font-family: "Montserrat", sans-serif;
+  
   background-color: ${(p) => p.theme.primary};
   height: 680px;
   width: 100%;

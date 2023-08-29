@@ -10,7 +10,7 @@ interface AccordionProps {
 }
 
 const AccordionItem = styled.div`
-  font-family: "Montserrat", sans-serif;
+  
   color: #ccc;
   text-align: left;
   border: 1px solid #333;

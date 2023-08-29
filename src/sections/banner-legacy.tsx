@@ -1,10 +1,10 @@
-import Router from "next/router";
+import { useRouter } from "next/router";
 import styled from "styled-components";
 import { useMediaQuery } from "@/components/useMediaQuery";
 
 const Banner = () => {
   const isNonMobileScreen = useMediaQuery(1100);
-
+  const Router = useRouter();
   return (
     <Section>
       <TextWrapper>
@@ -33,10 +33,6 @@ const Banner = () => {
   );
 };
 const Section = styled.div`
-  font-family: "Gotham", sans-serif;
-  button {
-    font-family: "Gotham", sans-serif;
-  }
   width: 100%;
   display: flex;
   align-items: center;

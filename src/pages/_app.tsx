@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
 import type { AppProps } from "next/app";
-import { Roboto, Montserrat } from "@next/font/google";
+import { Montserrat } from "@next/font/google";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -15,16 +15,13 @@ section {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
     background-color: #000;
     color: #000;
   }
-  font-family: "Montserrat", sans-serif;
   h1 {
     font-weight: 700;
   }
   h1, h2, h3, h4,p {
-    font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
   }
@@ -50,15 +47,13 @@ section {
 `;
 
 const montserrat = Montserrat({
-  weight: ["400", "500", "600", "800", "900"],
-  style: ["normal", "italic"],
   subsets: ["latin"],
 });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <main className={montserrat.className}>
+      <main style={montserrat.style} className={montserrat.className}>
         <GlobalStyle />
         <Component {...pageProps} />
         <Analytics />

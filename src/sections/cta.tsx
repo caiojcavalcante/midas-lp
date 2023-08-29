@@ -26,7 +26,7 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   padding: 20px 40px;
-  font-family: "Montserrat", sans-serif;
+  
   font-weight: bolder;
   font-size: 1rem;
   width: fit-content;
