@@ -45,25 +45,6 @@ export default class MyDocument extends Document {
             name="description"
             content="Midas é uma agência de marketing especializada em lançamentos e conteúdo digital."
           />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,800;0,900;1,900&display=swap"
-            rel="stylesheet"
-          />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,800;0,900;1,900&family=Open+Sans:ital@0;1&display=swap"
-            rel="stylesheet"
-          />
-
           <link rel="canonical" href="https://midasltda.co/new-page" />
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
