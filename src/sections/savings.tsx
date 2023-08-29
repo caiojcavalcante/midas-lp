@@ -17,7 +17,7 @@ const Savings = () => {
 
   const [font, setFont] = useState(false);
 
-  const isNonMobileScreen = useMediaQuery(1100);
+  const isNonMobileScreen = useMediaQuery(1000);
 
   const ref = useRef(null);
 
@@ -169,7 +169,7 @@ const Section = styled.section<{ isNonMobileScreen: boolean }>`
   }
   h1 {
     margin: 0;
-    font-size: ${(p) => (p.isNonMobileScreen ? "7rem" : "15vw")};
+    font-size: ${(p) => (p.isNonMobileScreen ? "7rem" : "13vw")};
     color: ${(p) => p.theme.text};
   }
   h2 {
@@ -197,7 +197,6 @@ const Section = styled.section<{ isNonMobileScreen: boolean }>`
   }
 `;
 const Price = styled.h1`
-  font-size: 4.8rem;
   display: flex;
 `;
 

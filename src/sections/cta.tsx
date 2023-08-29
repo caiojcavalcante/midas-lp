@@ -44,6 +44,7 @@ const Container = styled.div`
   text-align: center;
   gap: 20px;
   max-width: 800px;
+  box-sizing: border-box;
 `;
 
 const Wrapper = styled.div`

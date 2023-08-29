@@ -12,11 +12,9 @@ const Header = () => {
 
   const [hasScrolled, setHasScrolled] = useState(false);
 
-  const [activeSection, setActiveSection] = useState("");
-
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      setHasScrolled(window.scrollY > 100);
+      setHasScrolled(window.scrollY > 20);
     });
   }, [hasScrolled]);
 

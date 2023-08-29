@@ -39,7 +39,7 @@ const Container = styled.div<{ borderless: boolean; maxWidth: number }>`
       ? ""
       : "background: linear-gradient(10deg, #000 0%, #111 100%);"}
 
-  h3 {
+  h2, h3 {
     font-size: 1.5rem;
     text-align: left;
   }

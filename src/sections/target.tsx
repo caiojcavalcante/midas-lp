@@ -36,12 +36,12 @@ const ForgetTheOldWay = () => {
             {list.map((item, index) => (
               <ul key={index}>
                 {item.map((item, index) => (
-                  <RevealWrapper key={index} delay={index * 100}>
-                    <li key={index}>
+                  <li key={index}>
+                    <RevealWrapper key={index} delay={100}>
                       <Check />
                       {item}
-                    </li>
-                  </RevealWrapper>
+                    </RevealWrapper>
+                  </li>
                 ))}
               </ul>
             ))}
@@ -60,7 +60,7 @@ const ListWrapper = styled.div`
     display: flex;
     flex-direction: column;
   }
-  gap: 40px;
+  gap: 30px;
 `;
 
 const Wrapper = styled.div`

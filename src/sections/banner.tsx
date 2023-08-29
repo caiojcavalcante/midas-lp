@@ -15,7 +15,9 @@ const Banner = () => {
           <p>Marketing na era digital on-demmand</p>
         </RevealWrapper>
         <RevealWrapper delay={600}>
-          <Button>Ver planos</Button>
+          <Button onClick={() => Router.push("/new-page#planos")}>
+            Ver planos
+          </Button>
         </RevealWrapper>
       </TextWrapper>
     </Section>
