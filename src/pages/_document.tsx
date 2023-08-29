@@ -64,7 +64,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <link rel="canonical" href="https://midasltda.co/" />
+          <link rel="canonical" href="https://midasltda.co/new-page" />
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
           <link
@@ -107,7 +107,7 @@ export default class MyDocument extends Document {
             sizes="180x180"
             href="/apple-touch-icon-180x180.png"
           />
-          <Script
+          {/* <Script
             strategy="afterInteractive"
             id="gtm-script"
             dangerouslySetInnerHTML={{
@@ -117,15 +117,15 @@ export default class MyDocument extends Document {
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-PFHZF5M');`,
             }}
-          />
+          /> */}
         </Head>
         <body>
-          <noscript
+          {/* <noscript
             dangerouslySetInnerHTML={{
               __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFHZF5M"
       height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
             }}
-          />
+          /> */}
           <Main />
           <NextScript />
         </body>
