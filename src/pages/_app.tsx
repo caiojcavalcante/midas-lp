@@ -18,6 +18,10 @@ section {
     background-color: #000;
     color: #000;
   }
+  ::selection {
+    //contrast color
+    background-color: #da0e;
+  }
   h1 {
     font-weight: 700;
   }

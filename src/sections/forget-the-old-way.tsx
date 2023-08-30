@@ -22,7 +22,7 @@ const ForgetTheOldWay = () => {
         <RevealWrapper delay={600}>
           <Card>
             <Logo />
-            <h2>Midas Web Design</h2>
+            <h2>Midas</h2>
             <ul>
               <li>
                 <Check />

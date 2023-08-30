@@ -10,14 +10,14 @@ const Benefits = () => {
     <Section id="como-funciona">
       <RevealWrapper delay={200}>
         <TextWrapper>
-          <h1>O job que você quer no momento que você precisa</h1>
+          <h1>O lançamento que você quer no momento que você precisa</h1>
         </TextWrapper>
       </RevealWrapper>
       <BenefitWrapper>
         <RevealWrapper delay={100}>
           <Benefit>
             <MailIcon />
-            <p>Assine um de nossos planos e solicite quantas demandas quiser</p>
+            <p>Assine um de nossos planos e solicite quantas demandas forem necessárias</p>
           </Benefit>
         </RevealWrapper>
         <RevealWrapper delay={300}>
