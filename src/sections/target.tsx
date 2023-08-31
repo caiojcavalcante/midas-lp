@@ -6,19 +6,17 @@ import TextWrapper from "@/components/TextWrapper";
 
 const list = [
   [
-    "Sites institucionais",
-    "Lojas virtuais",
-    "Blogs",
+    "Gestão de tráfego pago",
+    "Criação de estratégias de marketing personalizadas especificamente para você",
+    "Copys e roteiros validados e personalizados para cada um dos nossos cliente",
     "Landing pages de venda",
-    "Landing pages de captura",
-    "Landing pages de obrigado",
+    "Páginas de captura",
   ],
   [
-    "Landing pages de serviço",
-    "UI Design para Apps e SaaS",
+    "Páginas de obrigado",
+    "Lojas virtuais",
+    "Sites institucionais",
     "Manutenção, correção e backups de sites",
-    "Configuração de área de membros",
-    "Checkout personalizado",
   ],
 ];
 
@@ -27,7 +25,10 @@ const ForgetTheOldWay = () => {
     <Section>
       <RevealWrapper delay={200}>
         <TextWrapper>
-          <h1>Sites, landing pages, lojas virtuais e muito mais</h1>
+          <h1>
+            Gestão dos seus anúncios, Copies, Roteiros de vendas, Sites e muito
+            mais
+          </h1>
         </TextWrapper>
       </RevealWrapper>
       <Wrapper>

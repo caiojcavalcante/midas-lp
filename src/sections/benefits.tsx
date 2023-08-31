@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import MailIcon from "@/components/icons/Mail";
+import PeopleIcon from "@/components/icons/People";
 import HeartIcon from "@/components/icons/Heart";
 import RedoIcon from "@/components/icons/Redo";
 import { RevealWrapper } from "next-reveal";
@@ -10,26 +10,32 @@ const Benefits = () => {
     <Section id="como-funciona">
       <RevealWrapper delay={200}>
         <TextWrapper>
-          <h1>O lançamento que você quer no momento que você precisa</h1>
+          <h1>O time que você quer no momento que você precisa!</h1>
         </TextWrapper>
       </RevealWrapper>
       <BenefitWrapper>
         <RevealWrapper delay={100}>
           <Benefit>
-            <MailIcon />
-            <p>Assine um de nossos planos e solicite quantas demandas forem necessárias</p>
+            <PeopleIcon />
+            <p>
+              Tenha uma equipe preparada para te ajudar com qualquer demanda em
+              qualquer momento
+            </p>
           </Benefit>
         </RevealWrapper>
         <RevealWrapper delay={300}>
           <Benefit>
-            <HeartIcon />
-            <p>Entrega finalizada em poucos dias, de segunda a sexta</p>
+            <RedoIcon />
+            <p>Venda mais, com recorrência no digital e consiga a autoridade e presença digital que sempre sonhou</p>
           </Benefit>
         </RevealWrapper>
         <RevealWrapper delay={500}>
           <Benefit>
-            <RedoIcon />
-            <p>Revisamos tudo até você ficar 100% satisfeito</p>
+            <HeartIcon />
+            <p>
+              Aqui sua satisfação é ouro, revisamos tudo para garantir
+              sua satisfação
+            </p>
           </Benefit>
         </RevealWrapper>
       </BenefitWrapper>

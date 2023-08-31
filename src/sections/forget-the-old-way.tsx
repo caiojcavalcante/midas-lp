@@ -12,10 +12,7 @@ const ForgetTheOldWay = () => {
       <RevealWrapper delay={500}>
         <TextWrapper>
           <h1>Esqueça a forma antiga e burocrática de contratar</h1>
-          <p>
-            É tão bom que você não vai querer procurar serviços de web design em
-            outro lugar.
-          </p>
+          <p>Somos primeiro e último time de marketing que você vai precisar</p>
         </TextWrapper>
       </RevealWrapper>
       <Wrapper>
@@ -26,23 +23,33 @@ const ForgetTheOldWay = () => {
             <ul>
               <li>
                 <Check />
-                <p>Escolha um plano e assine rapidamente.</p>
+                <p>
+                  Tenha um time profissional focado diariamente em atender suas
+                  demandas
+                </p>
               </li>
               <li>
                 <Check />
-                <p>Peça quantos jobs quiser.</p>
+                <p>Escolha um plano e assine rapidamente, sem burocracia</p>
               </li>
               <li>
                 <Check />
-                <p>Trabalharemos em um de cada vez.</p>
+                <p>
+                  Tempo é dinheiro, por isso em menos de 24 horas já começamos a
+                  trabalhar nos seus projetos
+                </p>
               </li>
               <li>
                 <Check />
-                <p>Acompanhe o progresso através de um app interno.</p>
+                <p>
+                  Acompanhe nosso progresso e resultados com nosso dashboard
+                </p>
               </li>
               <li>
                 <Check />
-                <p>Receba seus jobs no prazo e com uma entrega ultra rápida.</p>
+                <p>
+                  Receba seus projetos no prazo e com uma entrega super rápida
+                </p>
               </li>
               <li>
                 <Check />

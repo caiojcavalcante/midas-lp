@@ -10,7 +10,6 @@ interface AccordionProps {
 }
 
 const AccordionItem = styled.div`
-  
   color: #ccc;
   text-align: left;
   border: 1px solid #333;
@@ -40,6 +39,9 @@ const AccordionContent = styled.div<{ open: boolean }>`
   transition: max-height 0.3s ease; /* Use a transition for smooth animation */
   p {
     padding: 20px;
+    @media (max-width: 900px) {
+      font-size: 0.8rem;
+    }
   }
 `;
 

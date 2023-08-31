@@ -1,10 +1,39 @@
 import styled from "styled-components";
+import { RevealWrapper } from "next-reveal";
+import { useRouter } from "next/router";
+
 import Card from "@/components/Card";
 import Check from "@/components/icons/Check";
-import { RevealWrapper } from "next-reveal";
 import TextWrapper from "@/components/TextWrapper";
 
+const gold = [
+  "Gestão de tráfego pago",
+  "Estratégias de anúncios personalizadas",
+  "Landing Pages",
+  "Otimização de SEO",
+  "Reuniões de alinhamento mensais com nossa equipe",
+  "Acesso exclusivo ao nosso dashboard ",
+  "12 horas de suporte 5 dias na semana",
+];
+
+const vip = [
+  "Tudo do plano Gold",
+  "Estratégias de produção de conteúdo orgânico",
+  "Reuniões de alinhamento semanais com nossa equipe",
+  "Scripts de venda para sua equipe comercial",
+  "Treinamento de vendas mensal para sua equipe",
+  "Suporte prioritário 6 dias por semana 24 horas por dia",
+];
+
 const ForgetTheOldWay = () => {
+  const Router = useRouter();
+
+  const phone = "+5582999542481";
+  const text = "Olá, gostaria de assinar o plano Midas Gold.";
+  const url = `https://api.whatsapp.com/send?phone=${phone}&text=${text
+    .split(" ")
+    .join("%20")}`;
+
   return (
     <Section id="planos">
       <RevealWrapper delay={200}>
@@ -18,8 +47,8 @@ const ForgetTheOldWay = () => {
             <ListWrapper>
               <div>
                 <Tag>MAIS ESCOLHIDO</Tag>
-                <h2>Completo</h2>
-                <p>Uma demanda por vez</p>
+                <h2>Plano Gold</h2>
+                <p>Mudando o jogo com a MIDAS</p>
               </div>
               <div>
                 <h3>
@@ -30,38 +59,16 @@ const ForgetTheOldWay = () => {
                 </h4>
               </div>
               <ul>
-                <li>
-                  <div>
-                    <Check />
-                  </div>
-                  <p>Uma entrega de cada vez</p>
-                </li>
-                <li>
-                  <div>
-                    <Check />
-                  </div>
-                  <p>Solicitações ilimitadas</p>
-                </li>
-                <li>
-                  <div>
-                    <Check />
-                  </div>
-                  <p>Revisões ilimitadas</p>
-                </li>
-                <li>
-                  <div>
-                    <Check />
-                  </div>
-                  <p>Marcas ilimitadas</p>
-                </li>
-                <li>
-                  <div>
-                    <Check />
-                  </div>
-                  <p>Membros de equipe ilimitados</p>
-                </li>
+                {gold.map((item, index) => (
+                  <li key={index}>
+                    <div>
+                      <Check />
+                    </div>
+                    {item}
+                  </li>
+                ))}
               </ul>
-              <Button>Quero contratar!</Button>
+              <Button onClick={() => Router.push(url)}>Quero contratar!</Button>
             </ListWrapper>
           </Card>
         </RevealWrapper>
@@ -70,8 +77,8 @@ const ForgetTheOldWay = () => {
             <ListWrapper>
               <div>
                 <div />
-                <h2>Customizado</h2>
-                <p>Full-time</p>
+                <h2>Plano Gold VIP</h2>
+                <p>Experiência premium para o sucesso</p>
               </div>
               <div>
                 <h3>
@@ -79,50 +86,16 @@ const ForgetTheOldWay = () => {
                 </h3>
               </div>
               <ul>
-                <li>
-                  <div>
-                    <Check />
-                  </div>
-                  Entrega acelerada
-                </li>
-                <li>
-                  <div>
-                    <Check />
-                  </div>
-                  Reuniões semanais (se necessário)
-                </li>
-                <li>
-                  <div>
-                    <Check />
-                  </div>
-                  Várias solicitações ao mesmo tempo
-                </li>
-                <li>
-                  <div>
-                    <Check />
-                  </div>
-                  Solicitações ilimitadas
-                </li>
-                <li>
-                  <div>
-                    <Check />
-                  </div>
-                  Revisões ilimitadas
-                </li>
-                <li>
-                  <div>
-                    <Check />
-                  </div>
-                  Marcas ilimitadas
-                </li>
-                <li>
-                  <div>
-                    <Check />
-                  </div>
-                  Colaboração em tempo real via WhatsApp / Slack / Discord
-                </li>
+                {vip.map((item, index) => (
+                  <li key={index}>
+                    <div>
+                      <Check />
+                    </div>
+                    {item}
+                  </li>
+                ))}
               </ul>
-              <Button>Quero contratar!</Button>
+              <Button onClick={() => Router.push(url)}>Quero contratar!</Button>
             </ListWrapper>
           </Card>
         </RevealWrapper>
@@ -142,7 +115,6 @@ const Tag = styled.div`
 `;
 
 const ListWrapper = styled.div`
-  
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -150,6 +122,9 @@ const ListWrapper = styled.div`
   height: 100%;
   width: fit-content;
   gap: 40px;
+  ul {
+    gap: 10px;
+  }
   div {
     display: flex;
     flex-direction: column;
@@ -164,6 +139,9 @@ const ListWrapper = styled.div`
     }
   }
   li {
+    p {
+      font-size: 1rem;
+    }
     div {
       display: flex;
       align-items: center;
@@ -185,7 +163,7 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   padding: 20px 40px;
-  
+
   font-weight: bolder;
   font-size: 1rem;
   width: fit-content;

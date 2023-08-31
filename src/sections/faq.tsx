@@ -6,29 +6,26 @@ import TextWrapper from "@/components/TextWrapper";
 
 const questions = [
   {
-    title: "Não seria melhor eu contratar um web designer CLT?",
+    title: "Como a MIDAS pode me ajudar a crescer online?",
     content:
-      "Você já deve ter notado que está cada vez mais difícil encontrar bons profissionais de nível sênior que querem trabalhar como CLT. Além disso, existe toda aquela burocracia e riscos trabalhistas. De acordo com o Glassdor, o salário médio de um designer sênior hoje é de R$ 9.300 /mês. Por isso, nós somos uma excelente solução para empresas que querem ter um web designer sênior disponível, por um preço justo e sem burocracias, com apenas alguns cliques. Experimente.",
+      "Nós somos especialistas em transformar presença digital em resultados tangíveis. Com estratégias sob medida, desde otimização de SEO até campanhas de redes sociais, nossa abordagem focada no cliente impulsiona o crescimento de forma consistente e duradoura.",
   },
   {
-    title: "Como funciona o limite de requisições?",
+    title: "Por que devo escolher a MIDAS em vez de outras agências?",
     content:
-      "Você pode pedir quantas demandas quiser enquanto a sua assinatura estiver ativa. A única regra é que nós iremos trabalhar em uma de cada vez.",
+      "Na MIDAS nós temos um lema “Seu sucesso é nosso trabalho!”, por isso vamos além do óbvio. Nossa equipe apaixonada por marketing digital está sempre à frente das últimas tendências, garantindo que suas estratégias sejam inovadoras e eficazes. Não entregamos apenas resultados, entregamos uma parceria que se traduz em sucesso.",
   },
   {
-    title: "Qual é o prazo de entrega dos projetos?",
+    title: "Qual é a diferença entre o Plano Ouro e o Plano Ouro VIP?",
     content:
-      "O prazo varia de acordo com tipo de projeto, briefing e complexidade. Projetos maiores, que exigem mais tempo, serão divididos em pequenas entregas. Exemplo: uma estrutura completa de landing pages para um lançamento será dividida em etapas menores. Você receberá uma atualização ou entrega de acordo com o avanço.",
+      "Enquanto o Plano Ouro oferece uma base sólida de serviços essenciais, o Plano Ouro VIP é a experiência definitiva para quem busca uma presença online exuberante. Com gestão personalizada, acesso a tendências e suporte prioritário, você estará no topo do mercado digital.",
   },
   {
-    title: "Quem são os designers?",
+    title:
+      "Como posso saber se os serviços da MIDAS estão funcionando para o meu negócio?",
     content:
-      "Você pode ficar surpreso com isso, mas somos uma agência de uma pessoa só. Isso significa que você trabalhará direto comigo, o fundador.",
+      "A MIDAS é transparente e mensurável. Com o acesso ao dashboard, relatórios detalhados e monitoramento contínuo, você verá os resultados se transformarem em números reais. Nossa abordagem interativa significa que ajustamos as estratégias conforme necessário, garantindo que você alcance o sucesso desejado.",
   },
-  //   {
-  //     title: "",
-  //     content: "",
-  //   },
 ];
 
 const Faq = () => {

@@ -9,8 +9,11 @@ const Cta = () => {
         <RevealWrapper delay={400}>
           <Card maxWidth={1100}>
             <Container>
-              <h1>Ainda está em dúvida se realmente vale a pena?</h1>
-              <p>Podemos te ajudar. Vamos conversar!</p>
+              <h1>Preparado para transformar seu negócio de vez?</h1>
+              <p>
+                Temos confiança que somos o que está faltando para
+                trazer o sucesso para a sua empresa!
+              </p>
               <Button>Fale com um especialista</Button>
             </Container>
           </Card>
@@ -26,7 +29,7 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   padding: 20px 40px;
-  
+
   font-weight: bolder;
   font-size: 1rem;
   width: fit-content;
@@ -72,8 +75,13 @@ const Section = styled.section`
     font-weight: 700;
     width: 70%;
     @media (max-width: 900px) {
-      font-size: 2.5rem;
+      font-size: 2rem;
       width: 100%;
+    }
+  }
+  @media (min-width: 900px) {
+    p {
+      width: 70%;
     }
   }
 `;
