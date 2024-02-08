@@ -52,11 +52,11 @@ const ForgetTheOldWay = () => {
               </div>
               <div>
                 <h3>
-                  <b>R$ 500,00</b> /semana
+                  <b>R$ 999,99</b> /semana
                 </h3>
-                <h4>
-                  <b>R$ 2.000,00</b> /mês
-                </h4>
+{/*                 <h4>
+                  <b>R$ 7.999,00</b> /mês
+                </h4> */}
               </div>
               <ul>
                 {gold.map((item, index) => (
