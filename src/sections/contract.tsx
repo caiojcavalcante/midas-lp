@@ -52,7 +52,7 @@ const ForgetTheOldWay = () => {
               </div>
               <div>
                 <h3>
-                  <b>R$ 1249,99</b> /semana
+                  <b>R$ 1249,99</b> / semana
                 </h3>
 {/*                 <h4>
                   <b>R$ 7.999,00</b> /mês
